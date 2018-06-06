@@ -1,0 +1,234 @@
+{
+  "Title": "Example de traducció",
+  "Intro": "Hola soc {{name}}, tinc {{age}} anys.",
+  "Required": "Aquet camp es obligatori",
+  "RequiredOrNotExist": "Aquet camp es obligatori o aquet valor no existeis al sistema",
+  "Clear": "Netejar",
+  "ClearFilters": "Netejar filtres",
+  "Consult": "Consultar",
+  "Accept": "Acceptar",
+  "PolicyNotFound": "Policy not found",
+  "ReceiptNotFound": "Receipt not found",
+  "CorrectlySaved": "Salvat correctament",
+  "ErrorSaving": "Error salvant la petició",
+  "Startpage": {
+    "TranslationSections": "Hola mundo"
+  },
+  "Aboutpage": {
+    "TranslationSections": "Esto es la página Sobre mi"
+  },
+  "LazyModule1": {
+    "Intro": "Esta pagina ha sido cargada de manera lazy."
+  },
+  "Header": {
+    "PetitionType":"Tipus de Peticions",
+    "DGS":"DGS",
+    "Policies":"Pòlisses",
+    "Receipts":"Rebuts",
+    "Claims":"Sinistres",
+    "Breakdown":"Desglossament Rebuts / Pòlisses",
+    "OtherPetitions":"Altres Peticions",
+    "QueryRequests":"Consulta de Peticions",
+    "Help":"Ajuda",
+    "Print":"Imprimir"
+  },
+  "Identification": {
+    "Title": "Identificació de la petició",
+    "Code": "Codi",
+    "TypeCode": "Tipus de codi",
+    "Description": "Descripció",
+    "Required": {
+      "TypeCode": "Si us plau, selecciona el tipus de codi",
+      "Code": "Si us plau, selecciona el codi",
+      "Description": "Si us plau, escriu una descripció"
+    }
+  },
+  "Agent": {
+    "Mediator": "Mediador",
+    "Name": "Nom",
+    "Email": "Email",
+    "Required": {
+      "Mediator": "Si us plau, proporcioneu un mediador",
+      "Name": "Si us plau, proporcioneu un nom",
+      "Email": "Si us plau, proporcioneu un email"
+    }
+  },
+  "Content": {
+    "Title": "Contenido de la petición",
+    "Format": {
+      "Title": "Format",
+      "Model": "Model DGS",
+      "File": "Fitxer",
+      "Pdf": "PDF",
+      "Csv": "CSV",
+      "Xml": "XML",
+      "Xls": "XLS"
+    },
+    "Data": {
+      "Title": "Dades",
+      "Movements": "Moviments",
+      "PolicyWallet": "Pòlissa cartera"
+    },
+    "Products": {
+      "Title": "Productes",
+      "Any": "Cap",
+      "All": "Tots",
+      "Life": "Vida",
+      "LifeFin": "Vida Financera",
+      "Rest": "Resta",
+      "Policy": "Pòlissa"
+    },
+    "PolicyNumber": "Número de Pòlissa",
+    "Extraction": {
+      "Title": "Extraction Type",
+      "NewProd": "New production",
+      "Successives": "Successive",
+      "All": "All",
+      "Movements": "Movements",
+      "Suplements": "Suplements",
+      "Rebate": "Rebate",
+      "MonthCharges": "Month Payment",
+      "MonthEarrings": "Month Earrings"
+    },
+    "Records": {
+      "Title":"Registres",
+      "Occurred":"Ocorreguts",
+      "Declared":"Declarats",
+      "Closed":"Tancats"
+    },
+    "Petition": {
+      "Title": "Tipus de Petició",
+      "NoLife": "No vida",
+      "PolicyWallet": "Pòlisses cartera",
+      "EmitDate": "Emissió Data"
+    }
+  },
+  "Interval": {
+    "Title": "Intervals",
+    "Trimester": "Trimestres (any actual)",
+    "SelectDates": "Indica les dades",
+    "FiscalYear": "Any fiscal",
+    "DateFrom": "Data des de",
+    "DateTo": "Data fins",
+    "TypeDateSel": "Tipus data selecció",
+    "InformationCriterion": "Criteri d'informació",
+    "EffectDate": "Data d'efecte",
+    "EmitDate": "Data d'emissió",
+    "Annuity": "Anualitat",
+    "Semester1": "Semestre 1",
+    "Semester2": "Semestre 2",
+    "1": "1º",
+    "2": "2º",
+    "3": "3º",
+    "4": "4º",
+    "All": "Tots"
+  },
+  "Petition": {
+    "Title": "Contingut de l'aplicació",
+    "Policy": "Pòlissa",
+    "Receipt": "Rebut"
+  },
+  "Detail": {
+    "returnRequestList": "Return To Request List",
+    "request": "Request",
+    "petitionNumber": "Petition Number",
+    "petitionDate": "Petition Date",
+    "startDate": "Start Date",
+    "sucursal": "Branch office",
+    "format": "formar",
+    "petitionType": "Petition Type",
+    "policy": "Policy",
+    "subAgentNumber": "Sub Agent Number",
+    "receipt": "Receipt",
+    "result": "Result",
+    "name": "Name",
+    "text": "Text",
+    "email": "Email",
+    "origin": "Origin",
+    "typeSelectionDate": "Type Selection Date",
+    "status": "Status",
+    "userId": "UserId",
+    "endDate": "End Date",
+    "mediador": "Mediator",
+    "product": "Product",
+    "extractionType": "Extraction Type",
+    "code": "Code",
+    "subAgentPresence": "SubAgent Presence",
+    "downloadDate": "Download Date",
+    "visible": "Visible",
+    "active": "Active"
+  },
+  "QueryRequests" : {
+    "States": {
+      "Pending": "Pendent",
+      "Finalized": "Finalitzada",
+      "Both": "Ambdues"
+    },
+    "Types": {
+      "DGSCertificate": "Certificat DGS",
+      "Fiscal": "Fiscal",
+      "PoliciesMov": "Pòlisses Mov",
+      "PolociesCar": "Pòlisses Car",
+      "Receipts": "Recips",
+      "Sinisters": "Sinistres",
+      "Breakdown": "Desglosament",
+      "Others": "Altres",
+      "All": "Tots"
+    },
+    "DataRequestColumns": {
+      "RequestNumber": "Nombre petició",
+      "RequestDate": "Data petició",
+      "RequestType": "Tipus de petició",
+      "State": "Estat",
+      "Description": "Descripció",
+      "User": "Usuari"
+    }
+  },  
+  "Datepicker": {
+    "months3char": [
+      "Gen",
+      "Feb",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Oct",
+      "Nov",
+      "Des"
+    ],
+  
+    "monthsFull": [
+      "Gener",
+      "Febrer",
+      "Març",
+      "Abril",
+      "Maig",
+      "Juny",
+      "Juliol",
+      "Agost",
+      "Setembre",
+      "Octubre",
+      "Novembre",
+      "Desembre"
+    ],
+    "weekdays2char": ["Dg", "Dl", "Dt", "Dc", "Dj", "Dv", "Ds"],
+    "weekdays3char": ["Dmg", "Dll", "Dmt", "Dmc", "Djs", "Dvd", "Dss"],
+    "weekdaysFull": [
+      "Diumenge",
+      "Dilluns",
+      "Dimarts",
+      "Dimecres",
+      "Dijous",
+      "Divendres",
+      "Dissabte"
+    ],
+    "meridiemUppercase": ["AM", "PM"],
+    "meridiemLowercase": ["am", "pm"],
+    "meridiemFull": ["a.m.", "p.m."],
+    "title": "Selecciona una data",
+    "dateFormat": "DD/MM/YYYY"    
+  }
+}

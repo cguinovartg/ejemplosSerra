@@ -1,0 +1,2 @@
+# Bootstrap components
+org.springframework.cloud.bootstrap.BootstrapConfiguration=com.allianz.spa.data.requests.configuration.SourceLocatorConfig

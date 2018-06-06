@@ -1,0 +1,8 @@
+<nx-epac-header *ngIf="translations"
+  [nxNavigation]="navigationObject" 
+  [nxActive]="nxActive" 
+  [nxUrl]="urlHelp"
+  [nxHelp]="translations['Header.Help']" 
+  [nxPrint]="translations['Header.Print']">
+</nx-epac-header>
+<router-outlet></router-outlet>

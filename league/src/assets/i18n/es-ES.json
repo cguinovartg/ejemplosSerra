@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "Football":"Futbol",
+    "Classification":"Classificación",
+    "Team":"Equipo",
+    "Help": "Ayuda",
+    "Print": "Imprimir"
+  },
+  "Information": {
+    "Title":"La liga Allianz"
+  },
+  "Team": {
+    "TeamCreated":"Equipo Creado",
+    "CreateNewTeam":"Crear nuevo equipo",
+    "Name":"Nombre",
+    "Description":"Descripción",
+    "SelectColor":"Seleccionar color camiseta",
+    "SelectOptions":"Seleccionar Opciones",
+    "StadiumOwner":"Estadio en propiedad",
+    "Fans":"Más de 10000 aficionados",
+    "Grass":"Cesped artificial",
+    "CreateTeam":"Crear Equipo"
+  }
+}

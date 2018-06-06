@@ -1,0 +1,94 @@
+<form (ngSubmit)="handleSubmit(form.value, form.valid)" class="c-form" #form="ngForm" novalidate>
+  <div nxLayout="grid">
+    <div nxRow>
+      <div nxCol="12">
+        <app-sh-information name="{{ 'Information.Title' | translate }}"></app-sh-information>
+        <nx-message nxContext="success" *ngIf="showMessage" class="message">
+          {{ 'Team.TeamCreated' | translate }}           
+        </nx-message>
+      </div>
+    </div>
+    <div nxRow>
+      <div nxCol="12">
+        <div nxRow>
+          <div nxCol="12,12,8">
+            <h3>{{ 'Team.CreateNewTeam' | translate }}</h3>
+            {{ 'Team.Name' | translate }}:
+            <nx-formfield nxLabel="Text">
+              <input 
+                nxInput
+                type="text"
+                name="name"
+                required
+                [ngModel]="name"
+                (ngModelChange)="changeName($event)"/>
+            </nx-formfield>
+            {{ 'Team.Description' | translate }}:
+            <nx-formfield nxLabel="Text">
+              <textarea
+                nxInput
+                type="text"
+                name="description"
+                [ngModel]="description">
+              </textarea>
+            </nx-formfield>
+            <div nxRow>
+              <div nxCol="12,12,6">
+                <label><b>{{ 'Team.SelectColor' | translate }}</b></label>
+                <nx-radio-group 
+                  [ngModel]="color" 
+                  name="color"
+                  (ngModelChange)="changeColor($event)">
+                  <nx-radio nxValue="#DCDCDC"><span class="dot" style="background-color: #DCDCDC;"></span></nx-radio>
+                  <nx-radio nxValue="#000"><span class="dot" style="background-color: #000;"></span></nx-radio>
+                  <nx-radio nxValue="#FF0000"><span class="dot" style="background-color: #FF0000;"></span></nx-radio>
+                  <nx-radio nxValue="#0078B6"><span class="dot" style="background-color: #0078B6;"></span></nx-radio>
+                </nx-radio-group>
+              </div>
+              <div nxCol="12,12,6">
+                <label><b>{{ 'Team.SelectOptions' | translate }}</b></label>
+                <nx-checkbox 
+                  name="stadium" 
+                  [ngModel]="stadium" 
+                  [checked]="true" 
+                  (ngModelChange)="changeStadium($event)">
+                  {{ 'Team.StadiumOwner' | translate }}
+                </nx-checkbox>
+                <nx-checkbox
+                  name="fans" 
+                  [ngModel]="fans" 
+                  (ngModelChange)="changeFans($event)">
+                  {{ 'Team.Fans' | translate }}
+                </nx-checkbox>
+                <nx-checkbox 
+                  name="grass" 
+                  [ngModel]="grass" 
+                  (ngModelChange)="changeGrass($event)">
+                  {{ 'Team.Grass' | translate }}
+                </nx-checkbox>
+              </div>
+            </div>
+            <p>
+              <button type="submit" nxButton="primary" [disabled]="form.invalid">
+                {{ 'Team.CreateTeam' | translate }}
+              </button>
+            </p>
+          </div>
+          <div 
+            nxCol="12,12,4" 
+            class="background-light card">
+            <h3>{{ name }}</h3>
+            <div class="big-dot" [style.backgroundColor]="color"></div>
+            <div style="text-align: left">
+              <ul>
+                <li *ngIf="stadium">{{ 'Team.StadiumOwner' | translate }}</li>
+                <li *ngIf="fans">{{ 'Team.Fans' | translate }}</li>
+                <li *ngIf="grass">{{ 'Team.Grass' | translate }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

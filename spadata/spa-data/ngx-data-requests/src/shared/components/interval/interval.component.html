@@ -1,0 +1,77 @@
+<div [formGroup]="controlContainer.control" class="interval-container">
+  <legend class="c-form__legend">{{ 'Interval.Title' | translate }}</legend>
+  <div nxRow>
+    <div nxCol="4,4,12,12">
+      <nx-radio-toggle class="nx-formfield__interval-toggle-dates" [nxStyle]="'small'" formControlName="interval">
+        <nx-radio-toggle-button [nxValue]="'Interval.Trimester' | translate">{{ 'Interval.Trimester' | translate }}</nx-radio-toggle-button>
+        <nx-radio-toggle-button [nxValue]="'Interval.SelectDates' | translate">{{ 'Interval.SelectDates' | translate }}</nx-radio-toggle-button>
+        <nx-radio-toggle-button *ngIf="annuity" [nxValue]="'Interval.FiscalYear' | translate">{{ 'Interval.FiscalYear' | translate }}</nx-radio-toggle-button>
+      </nx-radio-toggle>
+    </div>
+  </div>
+
+  <div nxLayout="grid u-margin-top-lg" *ngIf="this.controlContainer.control.get('interval')?.value === ('Interval.Trimester' | translate)">
+    <div nxRow>
+      <p>{{ 'Interval.Trimester' | translate }}</p>
+      <div nxCol="12">
+        <nx-radio-group class="radio-group" formControlName="trimester">
+          <nx-radio [nxValue]="1">{{ 'Interval.1' | translate }}</nx-radio>
+          <nx-radio [nxValue]="2">{{ 'Interval.2' | translate }}</nx-radio>
+          <nx-radio [nxValue]="3">{{ 'Interval.3' | translate }}</nx-radio>
+          <nx-radio [nxValue]="4">{{ 'Interval.4' | translate }}</nx-radio>
+          <nx-radio [nxValue]="5">{{ 'Interval.All' | translate }}</nx-radio>
+        </nx-radio-group>
+      </div>
+    </div>
+  </div>
+
+  <div nxLayout="grid u-margin-top-lg" *ngIf="this.controlContainer.control.get('interval')?.value === ('Interval.SelectDates' | translate)">
+    <div nxRow>
+      <div nxCol="3">
+        <nx-formfield nxLabel="{{'QueryReq.DateFrom' | translate}}">
+          <input nxInput type="text" class="nx-formfield__identification-dateFrom" [nxDatepickerInputFor]="datepickerFrom">
+          <span nxFormfieldSuffix>
+            <nx-icon name="product-calendar" [nxDatepickerTriggerFor]="datepickerFrom"></nx-icon>
+            <nx-epac-datepicker [nxLocale]="locale" (nxDatePicked)="onDateFromPicked($event)" #datepickerFrom></nx-epac-datepicker>
+          </span>
+        </nx-formfield>
+      </div>
+      <div nxCol="3">
+        <nx-formfield nxLabel="{{'QueryReq.DateTo' | translate}}">
+          <input nxInput type="text" class="nx-formfield__identification-dateFrom" [nxDatepickerInputFor]="datepickerTo">
+          <span nxFormfieldSuffix>
+            <nx-icon name="product-calendar" [nxDatepickerTriggerFor]="datepickerTo"></nx-icon>
+            <nx-epac-datepicker [nxLocale]="locale" (nxDatePicked)="onDateToPicked($event)" #datepickerTo></nx-epac-datepicker>
+          </span>
+        </nx-formfield>
+      </div>
+    </div>
+    <div nxRow>
+      <div nxCol="3" *ngIf="typeDateSel">
+        <nx-formfield class="nx-formfield__interval-typeDate" [nxLabel]="'Interval.TypeDateSel' | translate">
+          <nx-dropdown formControlName="typeDateSel">
+            <nx-dropdown-item *ngFor="let type of typeDate" [nxValue]="type.id">{{ type.title | translate:param }}</nx-dropdown-item>
+          </nx-dropdown>
+        </nx-formfield>
+      </div>
+    </div>
+
+  </div>
+
+  <div nxLayout="grid u-margin-top-lg" *ngIf="annuity && this.controlContainer.control.get('interval')?.value === ('Interval.FiscalYear' | translate)">
+    <div nxRow>
+      <div nxCol="6">
+        <nx-formfield [nxLabel]="'Interval.FiscalYear' | translate">
+          <input nxInput formControlName="fiscalYear" type="number" min="1900" max="2099" step="1">
+        </nx-formfield>
+      </div>
+      <div nxCol="6">
+        <nx-formfield class="nx-formfield__interval-infoCriterion" [nxLabel]="'Interval.InformationCriterion' | translate">
+          <nx-dropdown  formControlName="informationCriterion">
+            <nx-dropdown-item *ngFor="let period of infoCriterion" [nxValue]="period.id">{{ period.title | translate:param }}</nx-dropdown-item>
+          </nx-dropdown>
+        </nx-formfield>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<form class="c-form" >
+  <div nxLayout="grid">
+    <div nxRow>
+      <div nxCol="12">
+        <app-sh-information name="{{ 'Information.Title' | translate }}"></app-sh-information>
+      </div>
+    </div>
+    <div nxRow>
+      <div nxCol="12">
+        <nx-epac-data-table [nxDisplayedColumns]="tableColumns"
+                      [nxData]="tableData"
+                      [nxTotalElements]="tableData.length"
+                      [nxPerPage]="perPage" >
+        </nx-epac-data-table>
+      </div>
+    </div>
+  </div>
+</form>

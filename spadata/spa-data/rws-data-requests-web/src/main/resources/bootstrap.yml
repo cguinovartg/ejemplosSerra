@@ -1,0 +1,39 @@
+
+#Always save using the UTF-8 encoding to minimize the possibility of errors.
+#Never, EVER use the TAB character anywhere in it.
+#All lines must have same number of spaces
+
+management.security.enabled: false
+
+spring:
+  application.name: data-requests
+  profiles:
+    active: local
+    include: database,security,remoteConfig
+
+#By default logging to console is null. But active later in local and dev
+logging.pattern.console: null
+logging.pattern.file: "[%d{yyyy-MM-dd HH:mm:ss}] %-5p %m (%F:%L)%n"
+logging.file: /opt/jboss/logs/log4j/rws-data-requests-web.log
+  
+logging.level:
+  root: INFO
+  org.springframework: INFO
+  org.dozer: WARN
+  springfox: WARN
+  com.allianz: WARN
+  com.allianz.spa.data.requests: INFO
+   
+---
+spring:
+  profiles: local,dev
+  cloud.config.uri: http://wwwd.es.intrallianz.com/rws-config-server/app
+logging.pattern.console: "[rws-data-requests-web] %m (%F:%L)\n"
+---
+spring:
+  profiles: int,pre,fdt
+  cloud.config.uri: https://wwwi.es.intrallianz.com/rws-config-server/app
+---
+spring:
+  profiles: prod
+  cloud.config.uri: https://www.es.intrallianz.com/rws-config-server/app

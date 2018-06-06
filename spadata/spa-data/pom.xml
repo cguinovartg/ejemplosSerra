@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.allianz.spa</groupId>
+	<artifactId>spa-data-requests</artifactId>
+	<version>${global.version}</version>
+	<packaging>pom</packaging>
+	<name>spa-data-requests</name>
+	<organization>
+		<name>AMOS Iberolatam</name>
+	</organization>
+	<parent>
+		<artifactId>rws-jbossmicros-parent</artifactId>
+		<groupId>com.allianz.parents</groupId>
+		<version>3.0.1-RELEASE</version>
+	</parent>
+
+	<properties>
+		<global.version>0.1.0-SNAPSHOT</global.version>
+        <sonar.projectName>spa-data-requests</sonar.projectName>
+		<sonar.projectKey>spa-data-requests</sonar.projectKey>
+	</properties>
+
+	<build>
+
+		<finalName>${project.artifactId}</finalName>
+
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.yml</include>
+					<include>**/*.xml</include>
+					<include>**/*.sql</include>
+					<include>META-INF/spring.factories</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+                <filtering>false</filtering>
+				<includes>
+					<include>*.key</include>
+				</includes>
+			</resource>
+		</resources>
+
+	</build>
+	
+    <modules>
+      <module>ngx-data-requests</module>
+      <module>rws-data-requests-web</module>
+    </modules>
+  
+</project>

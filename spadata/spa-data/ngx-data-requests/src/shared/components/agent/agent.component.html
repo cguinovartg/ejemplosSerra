@@ -1,0 +1,16 @@
+<div nxLayout="grid" class="agent-container">
+  <div nxRow>
+    <div nxCol="12,6,4,4">
+      <h3 nxHeadline="subsection-xsmall" class="agent-field-label" for="mediator">{{ 'Agent.Mediator' | translate }}</h3>
+      <input nxInput type="text" readonly [value]="user.agentNumber" class="agent-display-field nx-formfield__agent-agentNumber">
+    </div>  
+    <div nxCol="12,6,4,4">
+      <h3 nxHeadline="subsection-xsmall" class="agent-field-label" for="name">{{ 'Agent.Name' | translate }}</h3>
+      <input nxInput type="text" readonly [value]="displayName" class="agent-display-field nx-formfield__agent-name">
+    </div>
+    <div nxCol="12,6,4,4">
+      <h3 nxHeadline="subsection-xsmall" class="agent-field-label" for="email">{{ 'Agent.Email' | translate }}</h3>
+      <input nxInput type="text" readonly [value]="user.email" class="agent-display-field nx-formfield__agent-email">
+    </div>
+  </div>
+</div>

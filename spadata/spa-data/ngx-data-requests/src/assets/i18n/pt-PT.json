@@ -1,0 +1,239 @@
+{
+  "Title": "Ejemplo de traducción",
+  "Intro": "Hola soy {{name}}, tengo {{age}} años.",
+  "Required": "This field is required",
+  "Clear": "Clear",
+  "ClearFilters": "Clear filters",
+  "Consult": "Consult",
+  "Accept": "Accept",
+  "PolicyNotFound": "Policy not found",
+  "ReceiptNotFound": "Receipt not found",
+  "CorrectlySaved": "Correctamente salvado",
+  "ErrorSaving": "Error salvando la petición",
+  "Startpage": {
+    "TranslationSections": "Hola mundo"
+  },
+  "Aboutpage": {
+    "TranslationSections": "Esto es la página Sobre mi"
+  },
+  "LazyModule1": {
+    "Intro": "Esta pagina ha sido cargada de manera lazy."
+  },
+  "Header": {
+    "PetitionType": "Petitions Types",
+    "DGS": "DGS",
+    "Policies": "Policies",
+    "Receipts": "Receipts",
+    "Claims": "Claims",
+    "Breakdown": "Disaggregation Receipt / Policy",
+    "OtherPetitions": "Other petitions",
+    "QueryRequests": "Query Requests",
+    "Help": "Help",
+    "Print": "Print"
+  },
+  "Identification": {
+    "Title": "Identification of the request",
+    "Code": "Code",
+    "TypeCode": "Type of code",
+    "Description": "Description",
+    "Required": {
+      "TypeCode": "Please, select a type of code",
+      "Code": "Please, select a code",
+      "Description": "Please, insert a description"
+    }
+  },
+  "Agent": {
+    "Mediator": "Mediator",
+    "Name": "Name",
+    "Email": "Email",
+    "Required": {
+      "Mediator": "Please insert a mediator",
+      "Name": "Please insert a name",
+      "Email": "Please insert a email"
+    }
+  },
+  "Content": {
+    "Title": "Content of the petition",
+    "Format": {
+      "Title": "Format",
+      "Model": "Model DGS",
+      "File": "File",
+      "Pdf": "PDF",
+      "Csv": "CSV",
+      "Xml": "XML",
+      "Xls": "XLS"
+    },
+    "Data": {
+      "Title": "Data",
+      "Movements": "Movements",
+      "PolicyWallet": "Policy Wallet"
+    },
+    "Products": {
+      "Title": "Products",
+      "Any": "Any",
+      "All": "All",
+      "Life": "Life",
+      "LifeFin": "Financial Life",
+      "Rest": "Rest",
+      "Policy": "Policy"
+    },
+    "PolicyNumber": "Float Policy Number",
+    "Extraction": {
+      "Title": "Extraction Type",
+      "NewProd": "New production",
+      "Successives": "Successive",
+      "All": "All",
+      "Movements": "Movements",
+      "Suplements": "Suplements",
+      "Rebate": "Rebate",
+      "MonthCharges": "Charges of the month",
+      "MonthEarrings": "Month Earrings"
+    },
+    "Records": {
+      "Title": "Records",
+      "Occurred": "Occurred",
+      "Declared": "Declared",
+      "Closed": "Closed"
+    },
+    "Petition": {
+      "Title": "Petition Type",
+      "NoLife": "No Life",
+      "PolicyWallet": "Policy Wallet",
+      "EmitDate": "EmitDate"
+    }
+  },
+  "Interval": {
+    "Title": "Intervals",
+    "Trimester": "Trimesters (current year)",
+    "SelectDates": "Select dates",
+    "FiscalYear": "Fiscal year",
+    "DateFrom": "From",
+    "DateTo": "To",
+    "TypeDateSel": "Type date selection",
+    "InformationCriterion": "Selection criteria",
+    "EffectDate": "Effect date",
+    "EmitDate": "Emit date",
+    "Annuity": "Annuity",
+    "Semester1": "Semester 1",
+    "Semester2": "Semester 2",
+    "1": "1º",
+    "2": "2º",
+    "3": "3º",
+    "4": "4º",
+    "All": "All"
+  },
+  "Petition": {
+    "Title": "Content of application",
+    "Policy": "Policy",
+    "Receipt": "Receipt"
+  },
+  "QueryReq": {
+    "State": "State",
+    "Mediator": "Mediator",
+    "Type": "Type",
+    "DateFrom": "Date From",
+    "DateTo": "Date To"
+  },
+  "Detail": {
+    "ReturnRequestList": "Return To Request List",
+    "Request": "Request",
+    "PetitionNumber": "Petition Number",
+    "PetitionDate": "Petition Date",
+    "StartDate": "Start Date",
+    "Sucursal": "Branch office",
+    "Format": "formar",
+    "PetitionType": "Petition Type",
+    "Policy": "Policy",
+    "SubAgentNumber": "Sub Agent Number",
+    "Receipt": "Receipt",
+    "Result": "Result",
+    "Name": "Name",
+    "Text": "Description",
+    "Email": "Email",
+    "Origin": "Origin",
+    "TypeSelectionDate": "Type Selection Date",
+    "Status": "Status",
+    "UserId": "UserId",
+    "EndDate": "End Date",
+    "Mediador": "Mediator",
+    "Product": "Product",
+    "ExtractionType": "Extraction Type",
+    "Code": "Code",
+    "SubAgentPresence": "SubAgent Presence",
+    "DownloadDate": "Download Date",
+    "Visible": "Visible",
+    "Active": "Active"
+  },
+  "QueryRequests" : {
+    "States": {
+      "Pending": "Pendente",
+      "Finalized": "Terminado",
+      "Both": "Ambos"
+    },
+    "Types": {
+      "DGSCertificate": "Certificado DGS",
+      "Fiscal": "Fiscal",
+      "PoliciesMov": "Apólices Mov",
+      "PolociesCar": "Apólices Car",
+      "Receipts": "Recibos",
+      "Sinisters": "Sinistros",
+      "Breakdown": "Desgregacão",
+      "Others": "Outros",
+      "All": "Todos"
+    },
+    "DataRequestColumns": {
+      "RequestNumber": "Numero solicitão",
+      "RequestDate": "Data solicitão",
+      "RequestType": "Tipo de solicitão",
+      "State": "Estado",
+      "Description": "Descrição",
+      "User": "Usuario"
+    }
+  },
+  "Datepicker": {
+    "months3char": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "monthsFull": [
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro"
+    ],
+    "weekdays2char": ["Do", "Se", "Te", "Qa", "Qi", "Sx", "Sa"],
+    "weekdays3char": ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"],
+    "weekdaysFull": [
+      "Domingo",
+      "Segunda feira",
+      "Terça feira",
+      "Quarta feira",
+      "Quinta feira",
+      "Sexta feira",
+      "Sabado"
+    ],
+    "meridiemUppercase": ["AM", "PM"],
+    "meridiemLowercase": ["am", "pm"],
+    "meridiemFull": ["a.m.", "p.m."],
+    "title": "Selecione uma data",
+    "dateFormat": "DD/MM/YYYY"    
+  }
+}

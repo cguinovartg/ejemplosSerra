@@ -1,0 +1,53 @@
+<div *ngIf="user">
+  <app-sh-agent [user]="user"></app-sh-agent>
+  <div nxLayout="grid">
+    <nx-message class="result-message" *ngIf="showMessage" [nxContext]="requestResult">
+      {{ requestMessage | translate }}
+    </nx-message>
+    <form [formGroup]="form" class="c-form" (ngSubmit)="onSubmit(form)" novalidate class="c-form">
+      <app-sh-identification [typecode]="true" [code]="false" formGroupName="identificationForm"></app-sh-identification>
+      <div>
+        <h3 nxHeadline="subsection-small">
+          {{ 'Content.Title' | translate }}
+        </h3>
+        <br>
+        <div nxRow>
+          <div nxCol="12,12,4,4">
+            <nx-formfield nxLabel="{{'Content.Petition.Title' | translate}}*" formGroupName="content">
+              <nx-dropdown formControlName="petition">
+                <nx-dropdown-item *ngFor="let petition of petitions" [nxValue]="petition.code">{{ petition.description }}</nx-dropdown-item>
+              </nx-dropdown>
+              <nx-message nxContext="error" nxFormfieldError>
+                {{ 'Required' | translate }}
+              </nx-message>
+            </nx-formfield>
+          </div>
+      
+          <div nxCol="12,12,4,4">
+            <nx-formfield nxLabel="{{'Content.Format.Title' | translate}}*" formGroupName="content">
+              <nx-dropdown formControlName="format">
+                <nx-dropdown-item *ngFor="let format of formats" [nxValue]="format.value">{{ format.name | translate }}</nx-dropdown-item>
+              </nx-dropdown>
+              <nx-message nxContext="error" nxFormfieldError>
+                {{ 'Required' | translate }}
+              </nx-message>
+            </nx-formfield>
+          </div>
+        </div>
+      </div>
+    
+      <app-sh-interval
+        formGroupName="interval"
+        (dateFromChange)="onDateFromChange($event)"
+        (dateToChange)="onDateToChange($event)"
+        [typeDateSel]="false"
+        [annuity]="false">
+      </app-sh-interval>
+    
+      <div nxRow nxRowJustify="end">
+        <button nxButton="primary" type="submit" [disabled]="form.invalid">{{ 'Accept' | translate | uppercase }}</button>
+        <button nxButton="secondary" type="button" (click)="clearForm()">{{ 'Clear' | translate | uppercase }}</button>
+      </div>
+    </form>
+  </div>
+</div>

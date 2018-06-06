@@ -1,0 +1,23 @@
+{
+  "data": {
+    "id": "253592",
+    "date": "20-07-2017",
+    "type": "Certificate DGS",
+    "state": "Pending",
+    "description": "Lorem Ipsum",
+    "user": "PA206680",
+    "dateFrom": "01-01-2016",
+    "dateTo": "31-12-2016",
+    "mediator": "1070034",
+    "format": "XML EIAC",
+    "product": "-",
+    "extractType": "-",
+    "codeType": "Mediator",
+    "result": "-",
+    "requestOrigin": "Local",
+    "typeSelectionDate": "Effect Date",
+    "email": "name.test@allianz.es",
+    "policiNumber": "12345678",
+    "cooperativePresence": "None"
+  }
+}

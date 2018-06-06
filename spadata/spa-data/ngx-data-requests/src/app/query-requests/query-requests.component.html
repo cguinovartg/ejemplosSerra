@@ -1,0 +1,94 @@
+<div class="query-request-container" *ngIf="user">
+  <h3 nxHeadline="subsection-large">
+    {{ 'Header.QueryRequests' | translate }}
+  </h3>
+  <app-sh-agent [user]="user"></app-sh-agent>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div nxLayout="grid">
+      <div nxRow nxRowJustify="start">
+        <div nxCol="12,6,3,3">
+          <nx-formfield nxLabel="{{ 'QueryReq.State' | translate }}">
+            <nx-dropdown formControlName="status" ngDefaultControl >
+              <nx-dropdown-item *ngFor="let state of states" [nxValue]="state.value">{{ state.text | translate }}</nx-dropdown-item>
+            </nx-dropdown>
+            <nx-message nxContext="error" nxFormfieldError>
+              {{ 'Required' | translate }}
+            </nx-message>
+          </nx-formfield>
+        </div>
+        <div nxCol="12,6,3,3" *ngIf="codes">
+          <nx-formfield nxLabel="{{'QueryReq.Mediator' | translate}}">
+            <nx-dropdown formControlName="mediator" ngDefaultControl>
+              <nx-dropdown-item *ngFor="let code of codes" [nxValue]="code">{{ code }}</nx-dropdown-item>
+            </nx-dropdown>
+            <nx-message nxContext="error" nxFormfieldError>
+              {{ 'Required' | translate }}
+            </nx-message>
+          </nx-formfield>
+        </div>
+        <div nxCol="12,6,3,3">
+          <nx-formfield nxLabel="{{'QueryReq.Type' | translate}}">
+            <nx-dropdown formControlName="type" ngDefaultControl>
+              <nx-dropdown-item *ngFor="let type of types" [nxValue]="type.value">{{ type.text | translate }}</nx-dropdown-item>
+            </nx-dropdown>
+            <nx-message nxContext="error" nxFormfieldError>
+              {{ 'Required' | translate }}
+            </nx-message>
+          </nx-formfield>
+        </div>
+      </div>
+      <div nxRow nxRowJustify="start">
+        <div nxCol="12,6,3,3">
+          <nx-formfield nxLabel="{{'QueryReq.DateFrom' | translate}}">
+            <input nxInput type="text" formControlName="dateFrom" [nxDatepickerInputFor]="datepickerFrom">
+            <span nxFormfieldSuffix>
+              <nx-icon name="product-calendar" [nxDatepickerTriggerFor]="datepickerFrom"></nx-icon>
+              <nx-epac-datepicker [nxLocale]="locale" #datepickerFrom></nx-epac-datepicker>
+            </span>
+            <nx-message nxContext="error" nxFormfieldError>
+              {{ 'Required' | translate }}
+            </nx-message>
+          </nx-formfield>
+        </div>
+        <div nxCol="12,6,3,3">
+          <nx-formfield nxLabel="{{'QueryReq.DateTo' | translate}}">
+            <input nxInput type="text" formControlName="dateTo" [nxDatepickerInputFor]="datepickerTo">
+            <span nxFormfieldSuffix>
+              <nx-icon name="product-calendar" [nxDatepickerTriggerFor]="datepickerTo"></nx-icon>
+              <nx-epac-datepicker [nxLocale]="locale" #datepickerTo></nx-epac-datepicker>
+            </span>
+            <nx-message nxContext="error" nxFormfieldError>
+              {{ 'Required' | translate }}
+            </nx-message>
+          </nx-formfield>
+        </div>
+      </div>
+      <div nxRow nxRowJustify="end">
+        <button nxButton="primary" type="submit" [disabled]="form.invalid">
+          {{ 'Consult' | translate }}
+        </button>
+        <button nxButton="secondary" type="button" style="margin-left: 13px;" (click)="clearForm()">
+          {{ 'ClearFilters' | translate }}
+        </button>
+      </div>
+      <div nxRow>
+        <div nxCol="12">
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <nx-message nxContext="error" *ngIf="getDataSearchError">
+    {{ getDataSearchError }}
+  </nx-message>
+  <nx-epac-data-table 
+    class="query-requests__epac-data-table"
+    [nxDisplayedColumns]="tableColumns"
+    [nxData]="tableData"
+    [nxTotalElements]="tableData.length"
+    [nxPerPage]="perPage"
+    nxType="actionIcon"
+    [nxActions]="tableActions"
+    (nxHandleIconClick)="handleActionClick($event)">
+  </nx-epac-data-table>
+</div>

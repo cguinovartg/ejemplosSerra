@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+.divider {
+  border: 1px solid #565656;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.content-container {
+  margin: 30px;
+}
+@media (min-width: 0px) and (max-width: 376px) {
+  .c-radio-toggle__label {
+    padding: 4px 27px !important;
+  }
+  .justify-content-end button {
+    margin-left: 20px;
+    margin-right: 20px;
+  }  
+}
+@media (min-width: 377px) and (max-width: 768px) {
+  .c-radio-toggle__label {
+    padding: 4px 40px !important;
+  }
+  .justify-content-end button {
+    margin-left: 20px;
+    margin-right: 20px;
+  }  
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .c-radio-toggle__label {
+    padding: 4px 50px !important;
+  }
+}
+
+.justify-content-end button {
+  margin-left: 20px;
+}

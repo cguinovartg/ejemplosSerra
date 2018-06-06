@@ -1,0 +1,45 @@
+<ng-container [formGroup]="controlContainer.control">
+  <div *ngIf="typeCodes && codes">
+    <div nxRow>
+      <div nxCol="12">
+        <h3 nxHeadline="subsection-small">
+          {{ 'Identification.Title' | translate }}
+        </h3>
+      </div>
+    </div>
+
+    <div nxRow>
+      <div nxCol="12,12,4,4" *ngIf="typecode">
+        <nx-formfield class="nx-formfield__identification-typeCode" nxLabel="{{'Identification.TypeCode' | translate}} *">
+          <nx-dropdown formControlName="typeCode">
+            <nx-dropdown-item *ngFor="let type of typeCodes" [nxValue]="type.id">{{ type.title }}</nx-dropdown-item>
+          </nx-dropdown>
+          <nx-message nxContext="error" nxFormfieldError>
+            {{ 'Identification.Required.TypeCode' | translate }}
+          </nx-message>
+        </nx-formfield>         
+      </div>
+      <div nxCol="12,12,4,4" *ngIf="code">
+        <nx-formfield  class="nx-formfield__identification-code" nxLabel="{{'Identification.Code' | translate}} *">
+          <nx-dropdown formControlName="code">
+            <nx-dropdown-item *ngFor="let element of codes" [nxValue]="element">{{ element }}</nx-dropdown-item>
+          </nx-dropdown>
+          <nx-message nxContext="error" nxFormfieldError>
+            {{ 'Identification.Required.Code' | translate }}
+          </nx-message>
+        </nx-formfield>
+      </div>
+    </div>
+
+    <div nxRow>
+      <div nxCol="12">
+        <nx-formfield nxLabel="{{'Identification.Description' | translate}} *">
+          <textarea nxInput rows="4" formControlName="description"></textarea>
+          <nx-message nxContext="error" nxFormfieldError>
+            {{ 'Identification.Required.Description' | translate }}
+          </nx-message>
+        </nx-formfield>
+      </div>
+    </div>
+  </div>
+</ng-container>

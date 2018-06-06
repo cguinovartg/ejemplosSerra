@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "Football":"Football",
+    "Classification":"Classification",
+    "Team":"Team EN",
+    "Help": "Help",
+    "Print": "Print"
+  },
+  "Information": {
+    "Title":"Allianz League"
+  },
+  "Team": {
+    "TeamCreated":"Team Created",
+    "CreateNewTeam":"Create new team",
+    "Name":"Name",
+    "Description":"Description",
+    "SelectColor":"Select T-Shirt color",
+    "SelectOptions":"Select Options",
+    "StadiumOwner":"Stadium owner",
+    "Fans":"Mora than 10000 fans",
+    "Grass":"Artificial grass",
+    "CreateTeam":"Create Team"
+  }
+}

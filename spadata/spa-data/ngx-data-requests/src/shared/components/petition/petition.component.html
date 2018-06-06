@@ -1,0 +1,25 @@
+<ng-container [formGroup]="controlContainer.control">
+  <div nxRow>
+    <div nxCol="12">
+      <h3 nxHeadline="subsection-small">{{ 'Petition.Title' | translate }}</h3>
+    </div>
+  </div>
+  <div nxRow>
+    <div nxCol="12,12,6,6">
+      <nx-formfield [nxLabel]="('Petition.Policy' | translate) + ' *'">
+        <input nxInput type="number" formControlName="policyNumber">
+        <nx-message nxContext="error" nxFormfieldError>
+          {{ 'RequiredOrNotExist' | translate }}
+        </nx-message>
+      </nx-formfield>
+    </div>
+    <div nxCol="12,12,6,6">
+      <nx-formfield [nxLabel]="('Petition.Receipt' | translate) + ' *'">
+        <input nxInput type="number" formControlName="receiptNumber">
+        <nx-message nxContext="error" nxFormfieldError>
+          {{ 'RequiredOrNotExist' | translate }}
+        </nx-message>
+      </nx-formfield>
+    </div>
+  </div>
+</ng-container>

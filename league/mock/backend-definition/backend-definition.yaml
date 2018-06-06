@@ -1,0 +1,106 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Swagger BackEnd definition
+  description: A sample API with Swagger-Express-Middleware features
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+definitions:
+  rws-team-service:
+    properties:
+      success:
+        type: boolean
+
+  rws-classification-service:
+    properties:
+      classification:
+        type: integer
+      name:
+        type: string
+      pj:
+        type: integer
+      pg:
+        type: integer
+      pe:
+        type: integer
+      pp:
+        type: integer
+      gf:
+        type: integer
+      gc:
+        type: integer
+      ptos:
+        type: integer
+
+  rws-bff-boilerplate-help:
+    properties:
+      codCia:
+        type: integer
+      pageID:
+        type: string
+      context:
+        type: string
+  
+  rws-bff-boilerplate-log:
+    properties:
+      content:
+        type: string
+      route:
+        type: string
+      type:
+        type: string
+      userAgent:
+        type: string
+
+paths:
+  /rws-team-service:
+    get:
+      description: Create TEam
+      operationId: createTeam
+      responses:
+        default:
+          description: Create TEam
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/rws-team-service"
+  
+  /rws-classification-service:
+    get:
+      description: Returns help info
+      operationId: rws-classification-service
+      responses:
+        default:
+          description: Returns all teams by La liga Allianz
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/rws-classification-service"
+
+  /rws-bff-boilerplate/api/application-header-help:
+    get:
+      description: Returns help info
+      operationId: rws-bff-boilerplate-help
+      responses:
+        default:
+          description: Returns if pageId has help
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/rws-bff-boilerplate-help"
+  
+  /rws-bff-boilerplate/api/logs:
+    post:
+      description: Send log errors to the backend
+      operationId: rws-bff-boilerplate-log
+      responses:
+        default:
+          description: Returns empty
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/rws-bff-boilerplate-log"

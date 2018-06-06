@@ -1,0 +1,240 @@
+{
+  "Title": "Petición de datos",
+  "Intro": "Hola soy {{name}}, tengo {{age}} años.",
+  "Required": "Este campo es obligatorio",
+  "RequiredOrNotExist": "Este campo es obligatorio o el valor no existe en el sistema",
+  "Clear": "Limpiar",
+  "ClearFilters": "Limpiar filtros",
+  "Consult": "Consultar",
+  "Accept": "Aceptar",
+  "PolicyNotFound": "Póliza no encontrada",
+  "ReceiptNotFound": "Recibo no encontrado",
+  "CorrectlySaved": "Correctamente salvado",
+  "ErrorSaving": "Error salvando la petición",
+  "Startpage": {
+    "TranslationSections": "Hola mundo"
+  },
+  "Aboutpage": {
+    "TranslationSections": "Esto es la página Sobre mi"
+  },
+  "LazyModule1": {
+    "Intro": "Esta pagina ha sido cargada de manera lazy."
+  },
+  "Header": {
+    "PetitionType": "Tipos de Peticiones",
+    "DGS": "DGS",
+    "Policies": "Pólizas",
+    "Receipts": "Recibos",
+    "Claims": "Siniestros",
+    "Breakdown": "Desglose Recibo/Póliza",
+    "OtherPetitions": "Otras Peticiones",
+    "QueryRequests": "Consulta de peticiones",
+    "Help": "Ayuda",
+    "Print": "Imprimir"
+  },
+  "Identification": {
+    "Title": "Identificación de la petición",
+    "Code": "Código",
+    "TypeCode": "Tipo de Código",
+    "Description": "Descripción",
+    "Required": {
+      "TypeCode": "Por favor, selecciona el tipo de codigo",
+      "Code": "Por favor, selecciona un codigo",
+      "Description": "Por favor, pon una descripción"
+    }
+  },
+  "Agent": {
+    "Mediator": "Mediador",
+    "Name": "Nombre",
+    "Email": "Email",
+    "Required": {
+      "Mediator": "Por favor, inserta un mediador",
+      "Name": "Por favor, inserta un nombre",
+      "Email": "Por favor, inserta un email"
+    }
+  },
+  "Content": {
+    "Title": "Contenido de la petición",
+    "Format": {
+      "Title": "Formato",
+      "Model": "Modelo DGS",
+      "File": "Fichero",
+      "Pdf": "PDF",
+      "Csv": "CSV",
+      "Xml": "XML",
+      "Xls": "XLS"
+    },
+    "Data": {
+      "Title": "Datos",
+      "Movements": "Movimientos",
+      "PolicyWallet": "Pólizas Cartera"
+    },
+    "Products": {
+      "Title": "Producto",
+      "Any": "Ninguno",
+      "All": "Todos",
+      "Life": "Vida",
+      "LifeFin": "Vida Financiera",
+      "Rest": "Resto",
+      "Policy": "Póliza"
+    },
+    "PolicyNumber": "Numero póliza flota",
+    "Extraction": {
+      "Title": "Tipo de extracción",
+      "NewProd": "Nueva producción",
+      "Successives": "Sucesivos",
+      "All": "Todos",
+      "Movements": "Movimientos",
+      "Suplements": "Suplementos",
+      "Rebate": "Extornos",
+      "MonthCharges": " Cobros del mes",
+      "MonthEarrings": "Pendientes del mes"
+    },
+    "Records": {
+      "Title": "Registros",
+      "Occurred": "Ocurridos",
+      "Declared": "Declarados",
+      "Closed": "Cerrados"
+    },
+    "Petition": {
+      "Title": "Tipo de petición",
+      "NoLife": "No Vida",
+      "PolicyWallet": "Pólizas Cartera",
+      "EmitDate": "Fecha de emisión"
+    }
+  },
+  "Interval": {
+    "Title": "Intervalos",
+    "Trimester": "Trimestres (año actual)",
+    "SelectDates": "Selecciona fechas",
+    "FiscalYear": "Año fiscal",
+    "DateFrom": "Fecha desde",
+    "DateTo": "Fecha hasta",
+    "TypeDateSel": "Tipo fecha selección",
+    "InformationCriterion": "Criterio información",
+    "EffectDate": "Fecha de efecto",
+    "EmitDate": "Fecha de emisión",
+    "Annuity": "Anualidad",
+    "Semester1": "Semestre 1",
+    "Semester2": "Semestre 2",
+    "1": "1º",
+    "2": "2º",
+    "3": "3º",
+    "4": "4º",
+    "All": "Todos"
+  },
+  "Petition": {
+    "Title": "Contenido de la aplicación",
+    "Policy": "Póliza",
+    "Receipt": "Recibo"
+  },
+  "QueryReq": {
+    "State":"Estado",
+    "Mediator": "Mediador",
+    "Type": "Tipo",
+    "DateFrom": "Fecha desde",
+    "DateTo": "Fecha hasta"
+  },
+  "Detail": {
+    "ReturnRequestList": "Volver al listado de peticiones",
+    "Request": "Petición",
+    "PetitionNumber": "Número de peticion",
+    "PetitionDate": "Fecha de petición",
+    "StartDate": "Fecha inicio",
+    "Sucursal": "Sucursal",
+    "Format": "Formato",
+    "PetitionType": "Tipo de petición",
+    "Policy": "Póliza",
+    "SubAgentNumber": "Número de sub agente",
+    "Receipt": "Recibo",
+    "Result": "Resultado",
+    "Name": "Nombre",
+    "Text": "Description",
+    "Email": "Email",
+    "Origin": "Origen",
+    "TypeSelectionDate": "Tipo fecha selección",
+    "Status": "Estado",
+    "UserId": "Id usuario",
+    "EndDate": "Fecha fin",
+    "Mediador": "Mediador",
+    "Product": "Producto",
+    "ExtractionType": "Fecha extracción",
+    "Code": "Código",
+    "SubAgentPresence": "Sub Agente Asistencia",
+    "DownloadDate": "Fecha de descarga",
+    "Visible": "Visible",
+    "Active": "Activo"
+  },
+  "QueryRequests" : {
+    "States": {
+      "Pending": "Pendiente",
+      "Finalized": "Finalizada",
+      "Both": "Ambas"
+    },
+    "Types": {
+      "DGSCertificate": "Certificado DGS",
+      "Fiscal": "Fiscal",
+      "PoliciesMov": "Polizas Mov",
+      "PolociesCar": "Polizas Car",
+      "Receipts": "Recibos",
+      "Sinisters": "Siniestros",
+      "Breakdown": "Desglose",
+      "Others": "Otras",
+      "All": "Todos"
+    },
+    "DataRequestColumns": {
+      "RequestNumber": "Número petición",
+      "RequestDate": "Fecha petición",
+      "RequestType": "Tipo de petición",
+      "State": "Estado",
+      "Description": "Descripción",
+      "User": "Usuario"
+    }
+  },
+  "Datepicker": {
+    "months3char": [
+      "ene",
+      "feb",
+      "mar",
+      "abr",
+      "may",
+      "jun",
+      "jul",
+      "ago",
+      "sep",
+      "oct",
+      "nov",
+      "dic"
+    ],
+    "monthsFull": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "weekdays2char": ["do", "lu", "ma", "mi", "ju", "vi", "sa"],
+    "weekdays3char": ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
+    "weekdaysFull": [
+      "domingo",
+      "lunes",
+      "martes",
+      "miércoles",
+      "jueves",
+      "viernes",
+      "sábado"
+    ],
+    "meridiemUppercase": ["AM", "PM"],
+    "meridiemLowercase": ["am", "pm"],
+    "meridiemFull": ["a.m.", "p.m."],
+    "title": "Escoge una fecha", 
+    "dateFormat": "DD/MM/YYYY"  
+  }
+}

@@ -1,0 +1,135 @@
+<div class="container" *ngIf="user">
+  <form [formGroup]="form">
+    <app-sh-agent [user]="user" formGroupName="agentForm"></app-sh-agent>
+    <div nxLayout="grid" formGroupName="requestDataForm">
+      <div nxRow>
+        <div nxCol="12">
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div nxRow>
+        <div nxCol="12">
+          <nx-link nxStyle="block">
+            <a (click)="backToList()">
+              <span aria-hidden="true" class="nx-link__icon c-icon c-icon--arrow-left"></span>{{ 'Detail.ReturnRequestList' | translate }}
+            </a>
+          </nx-link>
+        </div>
+      </div>
+      <div nxRow>
+        <div nxCol="12">
+          <h5 style="margin: 20px 0 20px 0;">{{ 'Detail.Request' | translate }}: {{ requestId }}</h5>
+        </div>
+      </div>
+      <div nxRow>
+        <div nxCol="12">
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div nxRow class="details-row">
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.PetitionNumber' | translate }}</strong>
+          <input nxInput readonly formControlName="petitionNumber">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.PetitionDate' | translate }}</strong>
+          <input nxInput readonly formControlName="petitionDate">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.PetitionType' | translate }}</strong>
+          <input nxInput readonly formControlName="petitionType">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Status' | translate }}</strong>
+          <input nxInput readonly formControlName="status">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Text' | translate }}</strong>
+          <input nxInput readonly formControlName="text">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.UserId' | translate }}</strong>
+          <input nxInput readonly formControlName="userId">
+        </div>
+      </div>
+
+      <div nxRow class="details-row">
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.StartDate' | translate }}</strong>
+          <input nxInput readonly formControlName="startDate">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.EndDate' | translate }}</strong>
+          <input nxInput readonly formControlName="endDate">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Mediador' | translate }}</strong>
+          <input nxInput readonly formControlName="mediador">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Format' | translate }}</strong>
+          <input nxInput readonly formControlName="format">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Product' | translate }}</strong>
+          <input nxInput readonly formControlName="product">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.ExtractionType' | translate }}</strong>
+          <input nxInput readonly formControlName="extractionType">
+        </div>
+      </div>
+
+      <div nxRow class="details-row">
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Code' | translate }}</strong>
+          <input nxInput readonly formControlName="code">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Result' | translate }}</strong>
+          <input nxInput readonly formControlName="result">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Origin' | translate }}</strong>
+          <input nxInput readonly formControlName="origin">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.TypeSelectionDate' | translate }}</strong>
+          <input nxInput readonly formControlName="typeSelectionDate">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Email' | translate }}</strong>
+          <input nxInput readonly formControlName="email">
+        </div>
+      </div>
+
+      <div nxRow class="details-row">
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.Policy' | translate }}</strong>
+          <input nxInput readonly formControlName="policy">
+        </div>
+        <div nxCol="2" class="details-readonly">
+          <strong>{{ 'Detail.SubAgentPresence' | translate }}</strong>
+          <input nxInput readonly formControlName="subAgentPresence">
+        </div>
+      </div>
+
+      <div nxRow>
+        <div nxCol="12">
+          <div class="divider"></div>
+        </div>
+      </div>
+
+      <div nxRow>
+        <div nxCol="12">
+          <nx-link nxStyle="block">
+            <a (click)="backToList()">
+              <span aria-hidden="true" class="nx-link__icon c-icon c-icon--arrow-left"></span>{{ 'Detail.ReturnRequestList' | translate }}
+            </a>
+          </nx-link>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

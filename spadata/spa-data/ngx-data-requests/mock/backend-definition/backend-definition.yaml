@@ -1,0 +1,72 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Swagger BackEnd definition
+  description: A sample API with Swagger-Express-Middleware features
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+definitions:
+  language-stadistics:
+    properties:
+      id:
+        type: integer
+      language:
+        type: string
+      total:
+        type: integer
+
+  customers:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      surname:
+        type: string
+
+  rws-widgets-services:
+    properties:
+      codCia:
+        type: integer
+      pageID:
+        type: string
+
+paths:
+  /customers:
+    get:
+      description: Returns all customers
+      operationId: allCustomers
+      responses:
+        default:
+          description: Returns all customers
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/customers"
+
+  /language-stadistics:
+    get:
+      description: Returns all language-stadistics
+      operationId: alllanguage-stadistics
+      responses:
+        default:
+          description: Returns all language-stadistics
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/language-stadistics"
+  /rws-widgets-services:
+    get:
+      description: Returns help info
+      operationId: rws-widgets-services
+      responses:
+        default:
+          description: Returns if pageId has help
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/rws-widgets-services"
